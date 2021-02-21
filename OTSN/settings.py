@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-GOOGLE_RECAPTCHA_SECRET_KEY = '6LfdIDcaAAAAAE1Tf3QfxE87mnW5eApyH-udbkOL'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -120,5 +120,4 @@ STATIC_ROOT = './OTSN/static'
 STATIC_URL = '/static/'
 
 
-
-SECRET_KEY = 'gk8mg7^)v%_!)pi)2rg!venxflmr@(c)i$@#(uiyat8h6-c%7u' #GOOGLE_RECAPCHA
+SECRET_KEY = 'gk8mg7^)v%_!)pi)2rg!venxflmr@(c)i$@#(uiyat8h6-c%7u'

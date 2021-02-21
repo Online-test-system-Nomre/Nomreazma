@@ -1,15 +1,13 @@
-FROM python:3.8-slim
-WORKDIR /usr/src/app
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-RUN apt-get update && apt-get install -y nginx supervisor build-essential gcc libc-dev libffi-dev default-libmysqlclient-dev libpq-dev
-RUN pip install --upgrade pip
-RUN pip install gunicorn
-COPY . /usr/src/app/
-RUN if [ ! -f requirements.txt ]; then echo requirements.txt does not exist >&2; exit 1; fi; 
-RUN pip install -r requirements.txt
-RUN python manage.py collectstatic --noinput
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-CMD ["sh", "/usr/src/app/run.sh"]
+FROM ubuntu
+WORKDIR /usr/src/site
+RUN apt update; apt upgrade; apt install 
+RUN apt install python3-pip;pip3 install --upgrade pip
+COPY . /usr/src/site/
+RUN pip3 install -r requirements.txt
+RUN python3 /usr/src/site/manage.py makemigrations; python3 /usr/scr/site/manage.py migrate
+RUN python3 /usr/src/site/manage.py collectstatic --noinput 
+RUN uwsgi --http 0.0.0.0:80 --chdir /usr/scr/site/OTSN --wsgi-file /usr/scr/site/OTSN/wsgi.py
+RUN uwsgi /usr/src/site/server/nomreazma.ini; cp /usr/scr/site/server/uwsgi.service /etc/systemd/system/
+COPY /usr/src/site/server/nginxconf /etc/nginx/sites-available/nomreazma
+RUN ln -s /etc/nginx/sites-available/testproject /etc/nginx/sites-enabled
+RUN nginx -t; systemctl enable nginx; systemctl enable uwsgi; ufw allow 'Nginx Full'
