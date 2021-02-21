@@ -1,0 +1,208 @@
+{% load static %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+
+     <title>سامانه آزمون آنلاین نمره</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="تو خونه بمون و مثل ایام مدرسه آزمون بده">
+     <meta name="keywords" content="">
+     <meta name="author" content="دوستان خاص">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <!--
+       لینک آیکون صفحه آزمایشی است. لطفا درست فرمایید. اگر نیز ارور داد، آدرس را تصحیح فرمایید در زیر
+     -->
+     <link rel="shortcut icon" href="{% static '../static/img/favicon-yellow.ico' %}"/>
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'css/templatemo-digital-trend.css' %}">
+     <noscript>مرورگر شما از جاوا اسکریپت پشتیبانی نمیکند<br>اگر مرورگر شما جاوا اسکریپت را پشتیبانی می کند، در تنظیمات مرورگر فعال کنید<br>اگر جاوا اسکریپت فعال نباشد، سایت به طور صحیح کار نخواهد کرد و آزمون ها به درستی نمایش داده نخواهند شد!</noscript>
+</head>
+<body>
+
+     <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="/accounts/signup/" class="nav-link contact">عضو نمره آزما شوید</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/accounts/login/" class="nav-link">ورود به حساب کاربری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#info" class="nav-link">درباره دوستان خاص</a>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a href="#project" class="nav-link smoothScroll"></a>
+                    </li>-->
+                </ul>
+            </div>
+            <a class="navbar-brand" href="/">
+            <!--<i class="fa fa-line-chart"></i>-->
+              نمره آزما
+            </a>
+        </div>
+
+    </nav>
+
+
+     <!-- HERO -->
+     <section class="hero hero-bg d-flex justify-content-center align-items-center">
+               <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                              <div class="hero-text">
+
+                                   <h1 class="text-white" data-aos="fade-up">تو خونه بمون و مثل ایام مدرسه آزمون بده</h1>
+                                   <a href="/accounts/signup/" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">رایگان شروع کن</a>
+
+                              </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                          <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+                            <img src="../static/img/working-girl.png" class="img-fluid" alt="working girl" id="workinggirl">
+                          </div>
+                        </div>
+                    </div>
+               </div>
+     </section>
+
+
+     <section class="testimonial section-padding">
+        <div class="container">
+           <div class="row">
+              <div class="col-lg-6 col-md-5 col-12">
+                <div class="contact-image" data-aos="fade-up">
+                      <img src="../static/img/logo.webp" class="img-fluid" alt="website">
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-7 col-12">
+                <h4 class="my-5-pt-3" data-aos="fade-up" data-aos-delay="100">درباره سایت</h4>
+
+                <div class="quote" data-aos="fade-up" data-aos-delay="200"></div>
+
+                <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">سلام به سایت آموزشی نمره آزما خوش آمدید. این سایت برای آموزش مجازی و ارزیابی دانش آموزان ساخته شده است</h2>
+                <br/><br/><br/>
+           </div>
+        </div>
+     </section>
+
+   <!-- HERO -->
+     <section class="hero hero-bg d-flex justify-content-center align-items-center" id="info">
+               <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                              <div class="hero-text">
+
+                                   <h3 class="text-white" data-aos="fade-up">گروه دوستان خاص کار خود را از اسفند ماه 1398 آغاز کرد و در خرداد ماه سال 99 اولین بازی رسمی خود را با نام <a href="https://myket.ir/app/com.Dostan_Khass.covid19_game" target="_blank">"کووید 19" </a>منتشر کرد. 
+                    دوستان خاص در حوزه های برنامه نویسی، بازی سازی، تولید محتوا و ... فعالیت می کند
+                  </h3>
+
+                              </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                          <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+                            <img src="../static/img/doostankhas.png" class="img-fluid" alt="logo">
+                          </div>
+                        </div>
+                    </div>
+               </div>
+     </section>
+
+
+  <!--footer-->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="my-4">ارتباط با ما</h4>
+
+            <!--<p class="mb-1">
+              <i class="fa fa-phone mr-2 footer-icon"></i> 
+              +99 080 070 4224
+            </p>-->
+
+            <p>
+              <a href="mailto:dostankhass@gmail.com">
+                <i class="fa fa-envelope mr-2 footer-icon"></i>
+                dostankhass@gmail.com
+              </a>
+            </p>
+            
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="my-4">نشانی</h4>
+
+            <p class="mb-1">
+              <i class="fa fa-home mr-2 footer-icon"></i> 
+              ایران، استان آذربایجان شرقی، تبریز
+            </p>
+          </div>
+          <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">ما آزمون های خلاق <strong><br>می سازیم</strong> </h1>
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+            <!--قسمت اینستاگرام و ... -->
+            <ul class="footer-link">
+                <li><a href="quez/error404/">بلاگ</a></li>
+                <li><a href="/">نمره آزما</a></li>
+                <!--<li><a href="#">Privacy</a></li>-->
+            </ul>
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
+            <p class="copyright-text">Copyright &copy; 2021 Dotan Khass
+            <br>
+            <!--<a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a></p>-->
+          </div>
+
+          <!--<div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+            <ul class="social-icon">
+              <li><a href="#" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-dribbble"></a></li>
+              <li><a href="#" class="fa fa-behance"></a></li>
+            </ul>
+          </div>-->
+
+        </div>
+      </div>
+    </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="{% static 'js/jquery.min.js' %}"></script>
+     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'js/aos.js' %}"></script>
+     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+     <script src="{% static 'js/smoothscroll.js' %}"></script>
+     <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>
+
+{% endblock %}
