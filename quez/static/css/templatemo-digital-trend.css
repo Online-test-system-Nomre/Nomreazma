@@ -5,6 +5,9 @@ DIGITAL TREND
 https://templatemo.com/tm-538-digital-trend
 
 */
+  #alignbu{
+	text-align:center;
+  }
   @font-face{
     font-family: 'Vazir';
     src: url('../fonts/Vazir.woff') format('woff'),
