@@ -130,6 +130,6 @@ dmypy.json
 
 #vinv
 OTSN/settings.py
-*sqlite3
+sqlite3.db
 *migrations*
 *fandogh*
