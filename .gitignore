@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#vinv
+OTSN/settings.py
+*sqlite3
+*migrations*
+*fandogh*
