@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 #---پس از قرار دهی پروژه در سرور، سطر پایین از حالت کامنت خارج شود---
-ALLOWED_HOSTS = ["*"] #new
+#ALLOWED_HOSTS = ["nomreazma.ir"] #new
 
 
 # Application definition
@@ -117,7 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_ROOT = './OTSN/static'
-STATIC_URL = '/static/'
+STATIC_URL = '/media/'
 
 
 SECRET_KEY = 'gk8mg7^)v%_!)pi)2rg!venxflmr@(c)i$@#(uiyat8h6-c%7u'
