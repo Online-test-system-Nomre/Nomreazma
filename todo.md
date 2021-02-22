@@ -1,18 +1,20 @@
 # TODO's
 
-* [ ] dockerize
+* [ ] Dockerize
 
-## login
+## Login
 
-* [ ] add new FrontEnd to BackEnd
-* [ ] recaptcha
-* [ ] auth with Father Name
-* [ ] add user ip to DataBase
+* [x] Add new FrontEnd to BackEnd
+* [ ] Recaptcha
+* [ ] Auth with Father Name
+* [ ] Add user ip to DataBase
+* [ ] Improve security
 
-## quizzes
+## Quizzes
 
 * [ ] Multiple-choice questions
+* [--] Making Question section version Beta to Friday (1399/12/08)
 
-## Ai (Artificial intelligence)
+## Ai (Artificial Intelligence)
 
-* [ ] flask (api)
+* [ ] Flask (API)
