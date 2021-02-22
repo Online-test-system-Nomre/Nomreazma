@@ -1,7 +1,7 @@
 FROM debian
 WORKDIR /usr/src/site
-RUN apt-get update; apt-get upgrade
-RUN apt-get install nginx python3 python3-pip; pip3 install --upgrade pip
+RUN apt-get update -y ; apt-get upgrade -y
+RUN apt-get install nginx python3 python3-pip -y ; pip3 install --upgrade pip
 COPY . /usr/src/site/
 RUN pip3 install -r requirements.txt
 RUN python /usr/src/site/manage.py makemigrations; python3 /usr/scr/site/manage.py migrate
