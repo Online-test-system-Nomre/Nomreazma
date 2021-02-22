@@ -117,7 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_ROOT = './OTSN/static'
-STATIC_URL = '/media/'
+STATIC_URL = '/static/'
 
 
 SECRET_KEY = 'gk8mg7^)v%_!)pi)2rg!venxflmr@(c)i$@#(uiyat8h6-c%7u'
