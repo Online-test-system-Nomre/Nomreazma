@@ -133,3 +133,4 @@ dmypy.json
 sqlite3.db
 *migrations*
 *fandogh*
+.vscode/
