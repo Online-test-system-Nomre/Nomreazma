@@ -1,6 +1,6 @@
 # TODO's
 
-* [ ] docekryze
+* [ ] dockerize
 
 ## login
 
