@@ -1,6 +1,6 @@
 FROM debian
 WORKDIR /usr/src/site
-RUN apt-get update -y ; apt-get upgrade -y
+#RUN apt-get update -y ; apt-get upgrade -y
 RUN apt-get install nginx python3 python3-pip -y ; pip3 install --upgrade pip
 COPY . /usr/src/site/
 RUN pip3 install -r requirements.txt

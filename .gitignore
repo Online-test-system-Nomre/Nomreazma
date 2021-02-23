@@ -129,8 +129,7 @@ dmypy.json
 .pyre/
 
 #vinv
-*settings.py
+OTSN/settings.py
 sqlite3.db
-*migrations*
 *fandogh*
 .vscode/
