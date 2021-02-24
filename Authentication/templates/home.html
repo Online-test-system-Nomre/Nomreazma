@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
-
-{% block title %}Home{% endblock %}
+{% load static %}
+{% block title %}صفحه پروفایل{% endblock %}
 
 {% block content %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
-  <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
+  <body background="{% static 'img/BG1.webp' %}">
+    <p><a href="{% url 'index' %}">خروج</a></p>
+    <p><a href="404">بازگردانی رمز عبور</a></p>
+  </body>
 {% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
+  <p>شما به حساب خود وارد نشده اید</p>
+  <a href="{% url 'login' %}">ورود</a>
 {% endif %}
 {% endblock %}
