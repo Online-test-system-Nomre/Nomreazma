@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-GOOGLE_RECAPTCHA_SECRET_KEY = 'GOOGLE_RECAPCHA'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -22,9 +22,9 @@ GOOGLE_RECAPTCHA_SECRET_KEY = 'GOOGLE_RECAPCHA'
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = False
+#---پس از قرار دهی پروژه در سرور، سطر پایین از حالت کامنت خارج شود---
+ALLOWED_HOSTS = ["*"] #new
 
 
 # Application definition
@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.mediafiles',
+    'django.contrib.staticfiles',
     'Authentication',
     'quez',
 ]
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'OTSN.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'sqlite3.db',
     }
 }
 
@@ -114,11 +114,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-# media files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/media-files/
-media_ROOT = '/home/parseh/w/OnlineTestSystemNomre/OTSN/media'
-media_URL = '/media/'
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.1/howto/static-files/
+STATIC_ROOT = './OTSN/static'
+STATIC_URL = '/static/'
 
 
-
-SECRET_KEY = 'gk8mg7^)v%_!)pi)2rg!venxflmr@(c)i$@#(uiyat8h6-c%7u' #GOOGLE_RECAPCHA
+SECRET_KEY = ' '
