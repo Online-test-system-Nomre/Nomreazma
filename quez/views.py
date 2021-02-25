@@ -1,8 +1,7 @@
 from django.shortcuts import render
+from requests import get
 
 # Create your views here.
-#inputT
-
 
 def index(request):
     context = {}
