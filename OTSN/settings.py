@@ -21,9 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 #---پس از قرار دهی پروژه در سرور، سطر پایین از حالت کامنت خارج شود---
-ALLOWED_HOSTS = ["*"] #new
+#ALLOWED_HOSTS = ["nomreazma.ir"] #new
 
 
 # Application definition
