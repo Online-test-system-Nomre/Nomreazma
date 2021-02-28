@@ -13,8 +13,4 @@
 ## Quizzes
 
 * [ ] Multiple-choice questions
-* [--] Making Question section version Beta to Friday (1399/12/08)
-
-## Ai (Artificial Intelligence)
-
-* [ ] Flask (API)
+* [ ] Making Question section version 0.1
