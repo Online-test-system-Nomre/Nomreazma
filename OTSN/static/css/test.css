@@ -1,3 +1,8 @@
+noscript {
+    background-color: aqua;
+    text-align: center;
+}
+
 body {
     margin: 0px;
 }
@@ -7,7 +12,8 @@ body {
     color: #F1C111;
 }
 
-.submit {
+.submit,
+#authsub {
     width: auto;
     background-color: blueviolet;
     color: #fff;
@@ -59,4 +65,8 @@ div {
     background-color: #171819;
     height: 100px;
     margin: 0px;
+}
+
+.auth {
+    text-align: center;
 }
