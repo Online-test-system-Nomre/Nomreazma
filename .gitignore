@@ -132,3 +132,5 @@ dmypy.json
 sqlite3.db
 *fandogh*
 .vscode/
+
+quez/json/
