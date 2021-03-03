@@ -1,4 +1,4 @@
-# TODO's
+# TODO
 
 * [ ] Dockerize
 
@@ -12,5 +12,9 @@
 
 ## Quizzes
 
-* [ ] Multiple-choice questions
+* [x] Multiple-choice questions
+* [x] Add user data To DataBase
+* [ ] Authentication users from their numbers and usernames
+* [ ] Read User data From DataBase
+
 * [ ] Making Question section version 0.1

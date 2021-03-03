@@ -1,0 +1,115 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <title>آزمون اجتماعی فصل نهم|نمره آزما</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'css/test.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/timer.css' %}">
+    <noscript>
+        <link type="text/css" rel="stylesheet" href="{% static 'css/test.css' %}">
+         لطفا جاوا اسکریپت خود را از قسمت تنظیمات مرورگر فعال کنید <a href="https://b2n.ir/k78366">آموزش فعال کردن جاوااسکریپت در مرورگر</a><br>اگر جاوااسکریپت فعال نباشد، شما نمیتوانید آزمون را ارسال کنید! 
+    </noscript>
+</head>
+
+<body>
+    <script>
+        alert("سلام دانش‌آموز عزیز پوزش بابت صفحه بندی کمی زشت در بروزرسانی های بعدی حل میشود \nلطفا تا اتمام آزمون خارج از سایت خارج نشوید تا نمره شما به صورت کامل درج شود \nسپاس فراوان تیم توسعه نمره آزما:)");
+    </script>
+    <div class="auth">
+        <h1>نام خود را وارد نمایید</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="lusername">نام:</label><br>
+            <input type="text" name="username" id="username" value=""><br>
+            <input type="submit" name="submit" id="authsub" class="submit" value="صفحه بعدی">
+        </form>
+        <form action="" method="post">
+            {% csrf_token %}
+            <h1>شماره دفتری خود را وارد نمایید</h1>
+            <label for="lnum">شماره:</label><br>
+            <select name="num">
+                <option value="شماره دفتری">1</option>
+                <option value="شماره دفتری">2</option>
+                <option value="شماره دفتری">3</option>
+                <option value="شماره دفتری">4</option>
+                <option value="شماره دفتری">5</option>
+                <option value="شماره دفتری">6</option>
+                <option value="شماره دفتری">7</option>
+                <option value="شماره دفتری">8</option>
+                <option value="شماره دفتری">9</option>
+                <option value="شماره دفتری">10</option>
+                <option value="شماره دفتری">11</option>
+                <option value="شماره دفتری">12</option>
+                <option value="شماره دفتری">13</option>
+                <option value="شماره دفتری">14</option>
+                <option value="شماره دفتری">15</option>
+                <option value="شماره دفتری">16</option>
+                <option value="شماره دفتری">17</option>
+                <option value="شماره دفتری">18</option>
+                <option value="شماره دفتری">19</option>
+                <option value="شماره دفتری">20</option>
+                <option value="شماره دفتری">21</option>
+                <option value="شماره دفتری">22</option>
+                <option value="شماره دفتری">23</option>
+            </select><br>
+            <input type="submit" name="submit" value="شروع آزمون">
+        </from>
+    </div>
+    <div id="test">
+        <header id="head1">
+            <h1 class="h1a">آزمون اجتماعی</h1>
+        </header>
+        <section>
+            <div id="left1">
+                <div id="app"></div>
+            </div>
+            <div id="left2">
+            </div>
+            <div id="right">
+
+            </div>
+            <form action="" method="post">
+                {% csrf_token %}
+
+                <p class="pNumber">۱</p>
+                <p class="pqo">
+                    سوال
+                </p>
+                <input type="radio" name="t1" value="1" />گزینه یک<br/>
+                <input type="radio" name="t1" value="2" />گزینه دو<br/>
+                <input type="radio" name="t1" value="3" />گزینه سه<br/>
+                <input type="radio" name="t1" value="4" />گزینه چهار<br/><br/>
+                <input type="radio" name="t1" value="0" class="empput" />این سوال بدون پاسخ بماند<br/>
+                <p class="pNumber">۲</p>
+                <p class="pqo">
+                    سوال
+                </p>
+                <input type="radio" name="t2" value="1" />گزینه یک<br/>
+                <input type="radio" name="t2" value="2" />گزینه دو<br/>
+                <input type="radio" name="t2" value="3" />گزینه سه<br/>
+                <input type="radio" name="t2" value="4" />گزینه چهار<br/><br/>
+                <input type="radio" name="t2" value="0" class="empput" />این سوال بدون پاسخ بماند<br/>
+                <p class="pNumber">۳</p>
+                <p class="pqo">
+                    سوال
+                </p>
+                <input type="radio" name="t3" value="1" />گزینه یک<br/>
+                <input type="radio" name="t3" value="2" />گزینه دو<br/>
+                <input type="radio" name="t3" value="3" />گزینه سه<br/>
+                <input type="radio" name="t3" value="4" />گزینه چهار<br/><br/>
+                <input type="radio" name="t3" value="0" class="empput" />این سوال بدون پاسخ بماند<br/>
+                <a href="/" ><input type="submit" value="پایان" class="submit"/></a>
+                <script src="{% static 'js/test.js' %}"></script>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
+
+{% endblock %}

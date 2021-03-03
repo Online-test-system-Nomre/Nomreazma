@@ -1,0 +1,72 @@
+noscript {
+    background-color: aqua;
+    text-align: center;
+}
+
+body {
+    margin: 0px;
+}
+
+.h1a {
+    text-align: center;
+    color: #F1C111;
+}
+
+.submit,
+#authsub {
+    width: auto;
+    background-color: blueviolet;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px;
+}
+
+div {
+    text-align: right;
+    direction: rtl;
+}
+
+.pNumber {
+    color: #0088ff;
+    font-weight: bolder;
+    font-size: 23px;
+}
+
+.pqo {
+    background-color: #3ad28f;
+    text-align: center;
+}
+
+#left1 {
+    width: 19%;
+    height: 700px;
+    float: left;
+    background-attachment: fixed;
+    background-color: #bbd4d4;
+}
+
+#left2 {
+    width: 8%;
+    height: 700px;
+    float: left;
+    background-attachment: fixed;
+    background-color: #bbd4d4;
+}
+
+#right {
+    width: 3%;
+    height: 700px;
+    float: right;
+    background-attachment: fixed;
+    background-color: white;
+}
+
+#head1 {
+    background-color: #171819;
+    height: 100px;
+    margin: 0px;
+}
+
+.auth {
+    text-align: center;
+}

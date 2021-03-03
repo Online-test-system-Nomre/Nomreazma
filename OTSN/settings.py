@@ -22,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-#---پس از قرار دهی پروژه در سرور، سطر پایین از حالت کامنت خارج شود---
-#ALLOWED_HOSTS = ["nomreazma.ir"] #new
+# ---پس از قرار دهی پروژه در سرور، سطر پایین از حالت کامنت خارج شود---
+# ALLOWED_HOSTS = ["nomreazma.ir"] #new
 
 
 # Application definition
@@ -79,7 +79,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'sqlite3.db',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
