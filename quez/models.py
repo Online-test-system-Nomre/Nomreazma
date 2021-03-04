@@ -47,7 +47,7 @@ class ChoiceQuestions(models.Model):
             data = loads(data)
             # add data to varble
             num = data["num"]
-            user_name = data["user_name"]
+            user_name = data["stdudent_name"]
             test_input = data["test"]
             score = self.json_render_score(test_input)
             # connect sqlite DB
