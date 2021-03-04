@@ -1,5 +1,4 @@
 # OnlineTestSystemNomre
-مخزن رسمی سامانه آزمون برخط نمره در گیت‌هاب
 
 [**nomreazma.ir**](https://nomreazma.ir/) is a testing system. Powered by **Django**
 _______________________
