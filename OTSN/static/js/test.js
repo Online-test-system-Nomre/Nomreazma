@@ -1,10 +1,3 @@
-function Submit() {
-    document.getElementsByName["submit"].click();
-    if (document.getElementById["submit"].click()) {
-        document.getElementById["submit"].style.property = ""
-    }
-}
-
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
