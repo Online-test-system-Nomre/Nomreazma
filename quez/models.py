@@ -1,6 +1,6 @@
 import sqlite3
 from json import load, loads
-
+import re
 from django.db import models
 
 # Create your models here.
@@ -10,6 +10,37 @@ class ChoiceQuestions(models.Model):
 
     def __init__(self, data):
         self.data = str(data)
+
+    def _remove_non_alphanum_char(self, string):
+        return re.sub(r'\W+', ' ', string)
+
+    def _translate_numbers(self, current, new, string):
+        translation_table = str.maketrans(current, new)
+        return string.translate(translation_table)
+
+    def normalize_string(self, student_data, intorstr=False):
+        """gets a string and standardize it as following:
+        >> converts(removes others) all chars to persionChar or 
+        >> converts(removes others) all chars to EnglishDigits"""
+
+        student_data = self._remove_non_alphanum_char(str(student_data))
+        student_data = student_data.upper()
+
+        persian_numerals = '۱۲۳۴۵۶۷۸۹۰'
+        arabic_numerals = '١٢٣٤٥٦٧٨٩٠'
+        english_numerals = '1234567890'
+
+        student_data = self._translate_numbers(
+            persian_numerals, english_numerals, student_data)
+        student_data = self._translate_numbers(
+            arabic_numerals, english_numerals, student_data)
+
+        if intorstr != False:
+            all_digit = "".join(re.findall("\d", student_data))
+            return int(all_digit)
+        else:
+            all_alpha = "".join(re.findall("[آ-ی- ]", student_data))
+            return all_alpha
 
     def cmp(self, first_dict, second_dict):
         """Comparison first_dict and
@@ -46,9 +77,14 @@ class ChoiceQuestions(models.Model):
 
             data = loads(data)
             # add data to varble
-            num = data["num"]
-            user_name = data["stdudent_name"]
+            num = self.normalize_string(data["num"], intorstr=True)
+            user_name = self.normalize_string(data["stdudent_name"])
+            if "  " in user_name:
+                user_name = None
+            
             test_input = data["test"]
+            
+            print(num, user_name)
             score = self.json_render_score(test_input)
             # connect sqlite DB
             conn = sqlite3.connect("score.db")
@@ -63,6 +99,7 @@ class ChoiceQuestions(models.Model):
 
             # Add json File and socre to DB
             query = f'INSERT INTO students VALUES("{num}", "{user_name}", "{test_input}", "{score}")'
+            # TODO:normalyze user data and definition SQL-Injection
             cur.execute(query)
             conn.commit()
 
@@ -70,4 +107,4 @@ class ChoiceQuestions(models.Model):
             return f"{num}, {user_name}, {test_input}, {score}"
 
         except:
-            return '{"Success":"False"}'
+           return '{"Success":"False"}'
