@@ -14,7 +14,7 @@
 
 * [x] Multiple-choice questions
 * [x] Add user data To DataBase
-* [ ] Authentication users from their numbers and usernames
+* [x] Authentication users from their numbers and usernames
 * [ ] Read User data From DataBase
 
 * [ ] Making Question section version 0.1
