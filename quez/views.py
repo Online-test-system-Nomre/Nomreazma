@@ -8,11 +8,12 @@ from .models import ChoiceQuestions
 def getresponses(request):
     """This function gets response from frontend"""
 
-    user_data = {"num": 1, "user_name": "test",
-                 "test_input": "Ali", "score": {}}
-    user_test = {}
-
     if request.method == 'POST':
+        user_data = {}
+        user_data["num"] = int(request.POST.get("num"))
+
+        user_data["stdudent_name"] = str(request.POST.get("username"))
+        user_test = {}
         for i in range(1, 4):
             user_test[f"{i}"] = request.POST.get(f"t{i}")
 

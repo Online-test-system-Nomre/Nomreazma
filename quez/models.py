@@ -38,36 +38,36 @@ class ChoiceQuestions(models.Model):
     def get_data_json(self):
         """This Func work is get json data in client
         and proccesing data. In the End, return Procced data's"""
-        try:
-            # call data's in json
+        #try:
+        # call data's in json
 
-            data = f'{self.data}'
-            data = data.replace("'", '"')
+        data = f'{self.data}'
+        data = data.replace("'", '"')
 
-            data = loads(data)
-            # add data to varble
-            num = data["num"]
-            user_name = data["user_name"]
-            test_input = data["test"]
-            score = self.json_render_score(test_input)
-            # connect sqlite DB
-            conn = sqlite3.connect("score.db")
-            cur = conn.cursor()
-            # create DataBase and add data to DataBase
-            cur.execute('''CREATE TABLE IF NOT EXISTS students(
-                num INTEGER PRIMARY KEY,
-                user_name TEXT,
-                test_input JSON,
-                socre TEXT);
-                ''')
+        data = loads(data)
+        # add data to varble
+        num = data["num"]
+        user_name = data["stdudent_name"]
+        test_input = data["test"]
+        score = self.json_render_score(test_input)
+        # connect sqlite DB
+        conn = sqlite3.connect("score.db")
+        cur = conn.cursor()
+        # create DataBase and add data to DataBase
+        cur.execute('''CREATE TABLE IF NOT EXISTS students(
+            num INTEGER PRIMARY KEY,
+            user_name TEXT,
+            test_input JSON,
+            socre TEXT);
+            ''')
 
-            # Add json File and socre to DB
-            query = f'INSERT INTO students VALUES("{num}", "{user_name}", "{test_input}", "{score}")'
-            cur.execute(query)
-            conn.commit()
+        # Add json File and socre to DB
+        query = f'INSERT INTO students VALUES("{num}", "{user_name}", "{test_input}", "{score}")'
+        cur.execute(query)
+        conn.commit()
 
-            conn.close()
-            return f"{num}, {user_name}, {test_input}, {score}"
+        conn.close()
+        return f"{num}, {user_name}, {test_input}, {score}"
 
-        except:
-            return '{"Success":"False"}'
+        #except:
+        #    return '{"Success":"False"}'

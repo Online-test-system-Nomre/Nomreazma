@@ -1,3 +1,8 @@
+@media screen and (max-width: 785px) {
+    .base-timer, .base-timer__label {
+        
+    }
+}
 .base-timer {
     align-items: center;
     position: relative;
