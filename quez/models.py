@@ -1,6 +1,7 @@
+import re
 import sqlite3
 from json import load, loads
-import re
+
 from django.db import models
 
 # Create your models here.
@@ -81,9 +82,9 @@ class ChoiceQuestions(models.Model):
             user_name = self.normalize_string(data["stdudent_name"])
             if "  " in user_name:
                 user_name = None
-            
+
             test_input = data["test"]
-            
+
             print(num, user_name)
             score = self.json_render_score(test_input)
             # connect sqlite DB
@@ -107,4 +108,4 @@ class ChoiceQuestions(models.Model):
             return f"{num}, {user_name}, {test_input}, {score}"
 
         except:
-           return '{"Success":"False"}'
+            return '{"Success":"False"}'

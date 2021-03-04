@@ -1,3 +1,6 @@
+import sqlite3
+from os import system
+
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_protect
 
@@ -6,7 +9,8 @@ from .models import ChoiceQuestions
 
 @csrf_protect
 def getresponses(request):
-    """This function gets response from frontend"""
+    """ This function gets response
+    from frontend and scoring by json file"""
 
     if request.method == 'POST':
         user_data = {}
@@ -26,6 +30,14 @@ def getresponses(request):
 
     else:
         return render(request, 'quez/test.html')
+
+
+@csrf_protect
+def postresponses(request):
+    """"""
+    # run readDB bash script, this script work create new html
+    system("chmod +x scripts/readDB;./scripts/readDB")
+    return render(request, 'quez/natije.html')
 
 
 def index(request):

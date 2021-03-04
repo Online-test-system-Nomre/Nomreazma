@@ -135,3 +135,5 @@ sqlite3.db
 .vscode/
 
 quez/json/
+
+quez/templates/quez/natije.html

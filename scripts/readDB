@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo '
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+    <html lang="fa">
+    <head>
+        <title>نمره آزما</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" href="{% static "img/favicon-yellow.ico" %}" />
+
+        <noscript>
+            لطفا جاوا اسکریپت خود را از قسمت تنظیمات مرورگر فعال کنید <a href="https://b2n.ir/k78366">آموزش فعال کردن جاوااسکریپت در مرورگر</a><br>اگر جاوااسکریپت فعال نباشد، شما نمیتوانید آزمون را ارسال کنید! 
+        </noscript>
+    </head>
+    <body>
+        <script>
+        alert("ممنون از همکاری شما.نمرات شما در زیر نوشته شده است. در آینده شما میتوانید نمراتتان را خصوصی ببنید.لطفا اشکالات سایت را حتما به عوامل نمره آزما بگین(غیر از نمره کم!) ممنون از شما");
+        </script>' > quez/templates/quez/natije.html
+
+echo "SELECT * FROM students;" | sqlite3 score.db >> quez/templates/quez/natije.html
+# TODO: کثیف نشان داده میشود
+echo "
+    </body>
+</html>
+{% endblock %}" >> quez/templates/quez/natije.html
