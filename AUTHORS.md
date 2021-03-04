@@ -2,9 +2,9 @@
 
 * AUTHORS
 
-    [KomeilParseh](https://github.com/KomeilParseh)
-    [MohamadAminDezhban](https://github.com/mdk1384)
-    [MahdiBaradarYavari](https://github.com/mhiwb117)
+    [KomeilParseh](https://github.com/KomeilParseh)</br>
+    [MohamadAminDezhban](https://github.com/mdk1384)</br>
+    [MahdiBaradarYavari](https://github.com/mhiwb117)</br>
 
     - ThanksTo:
 
