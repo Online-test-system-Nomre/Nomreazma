@@ -149,7 +149,7 @@ input:invalid:required {
 }
   
 input:valid {
-    border: 2px solid black;
+    border: 2px solid green;
 }
 
 @media only screen and (max-width: 700px)
