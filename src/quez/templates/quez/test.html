@@ -3,13 +3,14 @@
 <html lang="fa">
 
 <head>
-    <title>نمره آزما</title>
+    <title>آزمون اجتماعی فصل نهم|نمره آزما</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="{% static 'img/favicon-yellow.ico' %}" />
 
     <link type="text/css" rel="stylesheet" href="{% static 'css/test.css' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/timer.css' %}">
+    <script type="text/js" src="{% static 'js/test.js' %}"></script>
     <noscript>
         <link type="text/css" rel="stylesheet" href="{% static 'css/test.css' %}">
          لطفا جاوا اسکریپت خود را از قسمت تنظیمات مرورگر فعال کنید <a href="https://b2n.ir/k78366">آموزش فعال کردن جاوااسکریپت در مرورگر</a><br>اگر جاوااسکریپت فعال نباشد، شما نمیتوانید آزمون را ارسال کنید! 
@@ -18,32 +19,36 @@
 
 <body>
     <script>
-        alert("سلام دانش‌آموز عزیز پوزش بابت صفحه بندی کمی زشت در بروزرسانی های بعدی حل میشود \nلطفا تا اتمام آزمون خارج از سایت خارج نشوید  و  دوباره آزمون  ندهید چون در دیتا بیس ذخیره نخواهد شد \nسپاس فراوان تیم توسعه نمره آزما");
+        alert("سلام دانش‌آموز عزیز در بروزرسانی های بعدی رابط کاربری جذاب تر و بهتر می شود \nلطفا تا اتمام آزمون از سایت خارج نشوید تا نمره شما به صورت کامل درج شود \nسپاس فراوان تیم توسعه نمره آزما");
     </script>
     <div id="container">
-        <header id="head1">
-            <h1 class="h1a">به نام خدا</h1>
-            <h1 class="h1a">آزمون اجتماعی</h1>
+        <header id="head">
+			<div id="head1">
+				<div id="app"></div>
+			</div>
+			<div id="head2">
+				<h1 class="h1a">به نام خدا</h1>
+				<h1 class="h1a">آزمون اجتماعی</h1>
+			</div>
         </header>
         <section>
-            <div id="left1">
-                <div id="app"></div>
-            </div>
-            <div id="left2">
+            <div id="left">
             </div>
             <div id="right">
             </div>
             <form action="" method="POST">
-                {% csrf_token %}
                 <div class="bordi">
                 </div>
-                <h1>نام خود را وارد نمایید</h1>
+                <h1 class="hlab">نام خود را وارد نمایید</h1>
                 <label for="lusername">نام:</label><br>
-                <input title="نام خود را وارد نمایید" type="text" name="username" id="username" value=""><br>
-                <h1>شماره دفتری خود را وارد نمایید</h1>
+                <input title="نام خود را وارد نمایید" type="text" name="username" id="username" lang="fa" required><br>
+                <span class="error" aria-live="polite"></span>
+                <h1 class="hlab">شماره دفتری خود را وارد نمایید</h1>
                 <label for="lnum">شماره:</label><br>
-                <input title="نام خود را وارد نمایید" min="1" max="23" type="number" name="num" id="num" value=""><br>
+                <input title="نام خود را وارد نمایید" min="1" max="23" type="number" name="num" id="num" required><br>
+                <span class="error" aria-live="polite"></span>
                 <script type="text/js" src="{% static 'js/test.js' %}"></script>
+				
                 <p class="pNumber">۱</p>
                 <p class="pqo">
                     سوال

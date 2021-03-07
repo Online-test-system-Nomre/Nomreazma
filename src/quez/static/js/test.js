@@ -1,6 +1,6 @@
 const FULL_DASH_ARRAY = 283;
-const WARNING_THRESHOLD = 10;
-const ALERT_THRESHOLD = 5;
+const WARNING_THRESHOLD = 600;
+const ALERT_THRESHOLD = 200;
 
 const COLOR_CODES = {
     info: {
@@ -16,7 +16,7 @@ const COLOR_CODES = {
     }
 };
 
-const TIME_LIMIT = 20;
+const TIME_LIMIT = 1200;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
