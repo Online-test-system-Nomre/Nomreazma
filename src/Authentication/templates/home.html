@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}صفحه پروفایل{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <body background="{% static 'img/BG1.webp' %}">
+    <p><a href="{% url 'index' %}">خروج</a></p>
+    <p><a href="404">بازگردانی رمز عبور</a></p>
+  </body>
+{% else %}
+  <p>شما به حساب خود وارد نشده اید</p>
+  <a href="{% url 'login' %}">ورود</a>
+{% endif %}
+{% endblock %}

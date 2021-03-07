@@ -1,0 +1,71 @@
+{% load static %} {% block content %}
+
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+
+    <title>صفحه مورد نظر یافت نشد</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="تو خونه بمون و مثل ایام مدرسه آزمون بده">
+    <meta name="keywords" content="">
+    <meta name="author" content="دوستان خاص">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--
+       لینک آیکون صفحه آزمایشی است. لطفا درست فرمایید. اگر نیز ارور داد، آدرس را تصحیح فرمایید در زیر
+     -->
+    <link rel="shortcut icon" href="{% static 'img/favicon-yellow.ico' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'css/templatemo-digital-trend.css' %}">
+    <noscript>مرورگر شما از جاوا اسکریپت پشتیبانی نمیکند<br>اگر مرورگر شما جاوا اسکریپت را پشتیبانی می کند، در تنظیمات مرورگر فعال کنید<br>اگر جاوا اسکریپت فعال نباشد، سایت به طور صحیح کار نخواهد کرد!</noscript>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero hero-bg d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                    <div class="hero-text">
+
+
+                        <h1 class="text-white" id="alignbu" data-aos="fade-up">Error 404</h1>
+                        <h2 class="text-white" id="alignbu" data-aos="fade-up">به نظر می‌رسد که شما در بین صفحات گم شده اید، ما به شما کمک می کنیم تا از اینجا به بیرون بروید.</h2>
+                        <h3 class="text-white" data-aos="fade-up"></h3>
+                        <a href="/" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">صفحه اصلی</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+                        <img src="{% static 'img/404.webp' %}" class="img-fluid" alt="404" id="workinggirl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>
+{% endblock %}

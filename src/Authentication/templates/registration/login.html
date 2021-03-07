@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ورود به حساب کاربری{% endblock %}
+
+{% block content %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body background="{% static 'img/BG1.webp' %}">
+    <h2>ورود به حساب کاربری</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" id="submitlogin">ورود</button>
+    </form>
+  </body>
+  </html>
+{% endblock %}

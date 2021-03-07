@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir-Light';
+    src: url('../fonts/Vazir-Light.woff') format('woff'), url('../fonts/Vazir-Light.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir-Medium';
+    src: url('../fonts/Vazir-Medium.woff') format('woff'), url('../fonts/Vazir-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir-Thin';
+    src: url('../fonts/Vazir-Thin.woff') format('woff'), url('../fonts/Vazir-Thin.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir-Bold';
+    src: url('../fonts/Vazir-Bold.woff') format('woff'), url('../fonts/Vazir-Bold.woff2') format('woff2');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plain-Regular';
+    src: url('../fonts/Plain-Regular.woff2') format('woff2'), url('../fonts/Plain-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plain-Light';
+    src: url('../fonts/Plain-Light.woff2') format('woff2'), url('../fonts/Plain-Light.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plain-Bold';
+    src: url('../fonts/Plain-Bold.woff2') format('woff2'), url('../fonts/Plain-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+noscript {
+    font-family: 'Vazir';
+    background-color: aqua;
+    text-align: center;
+}
+
+body {
+    font-family: 'Vazir';
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    margin: 0 auto 0;
+}
+
+.h1a {
+    text-align: center;
+    color: #F1C111;
+    text-shadow: 1px 1px 2px black, 0 0 25px #a0a0a0, 0 0 5px darkblue;
+    line-height: 70px;
+    margin: 0%;
+}
+
+.submit {
+    width: auto;
+    background-color: blueviolet;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px;
+}
+
+div {
+    text-align: right;
+    direction: rtl;
+}
+
+.pNumber {
+    color: #0088ff;
+    font-weight: bolder;
+    font-size: 23px;
+}
+
+.pqo {
+    background-color: #3ad28f;
+    text-align: center;
+}
+
+#left1 {
+    width: 19%;
+    height: 5000px;
+    float: left;
+    background-attachment: fixed;
+    background-color: #bbd4d4;
+}
+
+#left2 {
+    width: 8%;
+    height: 5000px;
+    float: left;
+    background-attachment: fixed;
+    background-color: #bbd4d4;
+}
+
+#right {
+    width: 3%;
+    height: 5000px;
+    float: right;
+    background-attachment: fixed;
+    background-color: white;
+}
+
+#head1 {
+    background-color: #171819;
+    height: 150px;
+    margin: 0px;
+}
+
+.bordi {
+    padding: 8px;
+    border-top: 12px ridge #bbd4d4;
+    width: 1800px;
+}

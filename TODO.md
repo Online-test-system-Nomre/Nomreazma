@@ -15,6 +15,7 @@
 * [x] Multiple-choice questions
 * [x] Add user data To DataBase
 * [x] Authentication users from their numbers and usernames
-* [ ] Read User data From DataBase
+* [x] Read User data From DataBase
+    + [ ] fix bad showed user data in natije.html
 
 * [ ] Making Question section version 0.1
