@@ -55,13 +55,13 @@
 }
 
 noscript {
-    font-family: 'Vazir';
+    font-family: 'Vazir', 'sans-serif';
     background-color: aqua;
     text-align: center;
 }
 
 body {
-    font-family: 'Vazir';
+    font-family: 'Vazir', 'sans-serif';
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -103,16 +103,8 @@ div {
     text-align: center;
 }
 
-#left1 {
-    width: 19%;
-    height: 5000px;
-    float: left;
-    background-attachment: fixed;
-    background-color: #bbd4d4;
-}
-
-#left2 {
-    width: 8%;
+#left {
+    width: 25%;
     height: 5000px;
     float: left;
     background-attachment: fixed;
@@ -127,14 +119,68 @@ div {
     background-color: white;
 }
 
-#head1 {
-    background-color: #171819;
-    height: 150px;
+#head {
     margin: 0px;
 }
 
+#head1{
+	background-color: #171819;
+	width:39%;
+	float:left;
+    height: 150px;
+}
+#head2{
+	background-color: #171819;
+	width:61%;
+	float:right;
+    height: 150px;
+}
 .bordi {
     padding: 8px;
     border-top: 12px ridge #bbd4d4;
     width: 1800px;
+}
+input:invalid {
+    border: 2px dashed red;
+}
+  
+input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+}
+  
+input:valid {
+    border: 2px solid green;
+}
+
+@media only screen and (max-width: 700px)
+{
+    #left {
+        display: none;
+    }
+    #right {
+        display: none;
+    }
+    .h1a {
+        font-size:18px;
+        text-align: center;
+        color: #F1C111;
+        text-shadow: 1px 1px 2px black, 0 0 25px #a0a0a0, 0 0 5px darkblue;
+        line-height: 45px;
+        margin: 0%;
+    }
+    #head1{
+        background-color: #171819;
+        width:39%;
+        float:left;
+        height: 100px;
+    }
+    #head2{
+        background-color: #171819;
+        width:61%;
+        float:right;
+        height: 100px;
+    }
+    .hlab{
+        font-size:16px;
+    }
 }
