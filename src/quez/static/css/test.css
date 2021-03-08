@@ -55,13 +55,13 @@
 }
 
 noscript {
-    font-family: 'Vazir', 'sans-serif';
+    font-family: 'Vazir-Medium', 'Plain-Regular', 'sans-serif';
     background-color: aqua;
     text-align: center;
 }
 
 body {
-    font-family: 'Vazir', 'sans-serif';
+    font-family: 'Vazir', 'Plain-Regular', 'sans-serif';
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -83,6 +83,7 @@ body {
     width: auto;
     background-color: blueviolet;
     color: #fff;
+    font-family: 'Vazir-Light', 'Plain-Regular', 'sans-serif';
     font-weight: bold;
     padding: 7px;
 }
@@ -107,6 +108,7 @@ div {
     width: 25%;
     height: 5000px;
     float: left;
+    text-align: center;
     background-attachment: fixed;
     background-color: #bbd4d4;
 }

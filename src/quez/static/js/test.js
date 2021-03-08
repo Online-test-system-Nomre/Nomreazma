@@ -1,3 +1,26 @@
+/* document.getElementById("progressbar").removeAttribute("value");
+const selectElement = document.querySelector('#test')
+var num = 100/15;
+function loop(){
+    var i = 0;
+    while (true){
+        num = num + 100/15;
+        i += 1 ;
+        if (num > 100){
+            num = num - 100;
+        }
+        console.log(i);
+        if (i == 1){
+            break
+        }
+    }
+}
+selectElement.addEventListener('change', function() {
+    const result = document.querySelector('progress');
+    loop();
+    result.setAttribute('value', String(num));
+});*/
+
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 600;
 const ALERT_THRESHOLD = 200;
