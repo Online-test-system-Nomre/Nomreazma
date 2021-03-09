@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 RUN python manage.py collectstatic --noinput
 RUN mkdir -p /etc/uwsgi/sites
 COPY config/nomreazma /etc/nginx/sites-available/nomreazma
-RUN chmod +x config/run; ./config/run
+CMD ["sh", "config/run"]
