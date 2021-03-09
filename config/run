@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ln -s /etc/nginx/sites-available/nomreazma /etc/nginx/sites-available/
 nginx -t
 systemctl restart nginx
