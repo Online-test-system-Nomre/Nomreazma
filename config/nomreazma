@@ -1,0 +1,13 @@
+server {
+    listen 80;
+    server_name nomreazma.ir nomreazma.ir;
+
+    location /static/ {
+        root /usr/src/app/;
+    }
+
+    location / {
+        include         uwsgi_params;
+        uwsgi_pass      unix:/run/uwsgi/nomreazma.sock;
+    }
+}
