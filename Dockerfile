@@ -9,5 +9,5 @@ COPY ./src /usr/src/app/
 RUN pip install -r requirements.txt
 RUN python manage.py collectstatic --noinput
 RUN mkdir -p /etc/uwsgi/sites
-COPY config/nginx/nomreazma /etc/nginx/sites-available/nomreazma
-RUN sh config/run.sh
+COPY config/nomreazma /etc/nginx/sites-available/nomreazma
+CMD ["sh", "config/run"]
