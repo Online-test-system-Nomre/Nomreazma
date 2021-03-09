@@ -1,13 +1,13 @@
 # TODO
 
+## Dockerize
+
 * [ ] Dockerize
 
 ## Login
 
-* [x] Add new FrontEnd to BackEnd
+* [ ] Add new FrontEnd to BackEnd
 * [ ] Recaptcha
-* [ ] Auth with Father Name
-* [ ] Add user ip to DataBase
 * [ ] Improve security
 
 ## Quizzes
@@ -16,6 +16,14 @@
 * [x] Add user data To DataBase
 * [x] Authentication users from their numbers and usernames
 * [x] Read User data From DataBase
-    + [ ] fix bad showed user data in natije.html
+    + [x] fix bad showed user data in natije.html
 
-* [ ] Making Question section version 0.1
+## Panel
+
+* [ ] convert User Options to Json Automatically And Send to BackEnd
+* [ ] Build Panel BACKEND
+    + [ ] Build URL by User or server
+
+* [ ] Build panel To User can (Graphics)
+    + design the quez
+    + see the result
