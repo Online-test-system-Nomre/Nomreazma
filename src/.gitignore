@@ -132,9 +132,6 @@ dmypy.json
 
 score.db
 sqlite3.db
-*fandogh*
 .vscode/
-
 quez/json/
-
 quez/templates/quez/natije.html
